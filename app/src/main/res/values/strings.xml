@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">Express App</string>
+    <string name="tv_registrar_usuario">Registrar Usuario</string>
     <string name="txt_email">Correo</string>
     <string name="txt_password">Contraseña</string>
-    <string name="text_ayuda">*Requerido*</string>
+    <string name="txt_nombre">Nombre(s)</string>
+    <string name="txt_confirm_pass">Comfirmar Contraseña</string>
+    <string name="text_ayuda">*Campo Obligatorio*</string>
     <string name="btn_iniciar">Iniciar</string>
     <string name="btn_registrar">Registrar</string>
+    <string name="btn_crear">Crear Cuenta</string>
 </resources>
