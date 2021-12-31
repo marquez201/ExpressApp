@@ -60,6 +60,7 @@
         app:helperText="@string/text_ayuda"
         app:helperTextTextColor="@color/white"
         app:hintTextColor="@color/white"
+        app:startIconDrawable="@drawable/ic_editar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_Registrar"
@@ -93,6 +94,7 @@
         app:helperText="@string/text_ayuda"
         app:helperTextTextColor="@color/white"
         app:hintTextColor="@color/white"
+        app:startIconDrawable="@drawable/ic_correo"
         app:startIconTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,6 +103,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -126,6 +129,9 @@
         app:helperText="@string/text_ayuda"
         app:helperTextTextColor="@color/white"
         app:hintTextColor="@color/white"
+        app:endIconMode="password_toggle"
+        app:passwordToggleDrawable="@drawable/ic_ocultar"
+        app:startIconDrawable="@drawable/ic_clave"
         app:startIconTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -134,6 +140,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPassword"
             android:textSize="20sp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -159,6 +166,9 @@
         app:helperText="@string/text_ayuda"
         app:helperTextTextColor="@color/white"
         app:hintTextColor="@color/white"
+        app:endIconMode="password_toggle"
+        app:passwordToggleDrawable="@drawable/ic_ocultar"
+        app:startIconDrawable="@drawable/ic_clave"
         app:startIconTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -167,6 +177,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPassword"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -62,11 +62,11 @@ public class Activity_Registrar extends AppCompatActivity {
 
         if(s_nombre.isEmpty() || s_nombre.length() < 5){
             showError(til_nombre_r,"Nombre no Valido");
-        }else if(s_email.isEmpty() || !s_email.contains("@")){
+        }if(s_email.isEmpty() || !s_email.contains("@")){
             showError(til_correo_r,"Correo no Valido");
-        }else if(s_password.isEmpty() || s_password.length() < 6){
+        }if(s_password.isEmpty() || s_password.length() < 6){
             showError(til_password_r,"La Contraseña debe tener mas de 6 Caracteres");
-        }else if(s_confirm_pass.isEmpty() || !s_confirm_pass.equals(s_password)){
+        }if(s_confirm_pass.isEmpty() || !s_confirm_pass.equals(s_password)){
             showError(til_confirm_pass_r,"Contraseña no Valida, No Coincide");
         }else {
             mProgressBar.setTitle("Procesando Registro");
