@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExpressApp">
         <activity
+            android:name=".Principal_Activity"
+            android:exported="false"
+            android:label="@string/title_activity_principal"
+            android:theme="@style/Theme.ExpressApp.NoActionBar" />
+        <activity
             android:name=".Activity_Inicio"
             android:exported="false" />
         <activity
