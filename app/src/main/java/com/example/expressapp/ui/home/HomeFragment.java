@@ -16,7 +16,7 @@ import com.example.expressapp.R;
 import com.example.expressapp.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
-
+/*
     private HomeViewModel homeViewModel;
     private FragmentHomeBinding binding;
 
@@ -29,6 +29,7 @@ public class HomeFragment extends Fragment {
         View root = binding.getRoot();
 
         final TextView textView = binding.textHome;
+
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
@@ -43,4 +44,6 @@ public class HomeFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
+ */
 }

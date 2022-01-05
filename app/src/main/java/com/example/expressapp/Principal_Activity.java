@@ -24,15 +24,17 @@ public class Principal_Activity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityPrincipalBinding binding;
-    private Button btn_cerrar_sesion;
+   // private Button btn_cerrar_sesion;
     FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        btn_cerrar_sesion = (Button) findViewById(R.id.nav_cerrar_sesion);
+        //btn_cerrar_sesion = (Button) findViewById(R.id.nav_cerrar_sesion);
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
+
+        /*
 
         btn_cerrar_sesion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,9 +46,12 @@ public class Principal_Activity extends AppCompatActivity {
             }
         });
 
+         */
+
         binding = ActivityPrincipalBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        /*
         setSupportActionBar(binding.appBarPrincipal.toolbar);
         binding.appBarPrincipal.fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +60,9 @@ public class Principal_Activity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+         */
+        /*
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -68,6 +76,8 @@ public class Principal_Activity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
+         */
+/*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -80,5 +90,8 @@ public class Principal_Activity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_principal);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+
+ */
     }
+
 }

@@ -7,19 +7,31 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_datos"
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_configuracion"
             android:title="@string/menu_gallery" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_acerca_de"
             android:title="@string/menu_slideshow" />
         <item
+            android:id="@+id/nav_servicio_gruas"
+            android:title="@string/btn_grua"
+            android:icon="@drawable/ic_servicios_de_gruas"/>
+        <item
+            android:id="@+id/nav_servicio_gasolina"
+            android:title="@string/nav_gasolina"
+            android:icon="@drawable/ic_servicios_de_gasolina"/>
+        <item
+            android:id="@+id/nav_servicio_gas"
+            android:title="@string/nav_gas"
+            android:icon="@drawable/ic_servicios_de_gas"/>
+        <item
             android:id="@+id/nav_cerrar_sesion"
-            android:icon="@drawable/ic_cerrar"
+            android:icon="@drawable/ic_cerra_de_sesion"
             android:title="@string/menu_cerrar_sesion" />
     </group>
 </menu>
