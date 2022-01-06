@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.expressapp.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainFragment extends Fragment {
     @Nullable
@@ -21,7 +22,6 @@ public class MainFragment extends Fragment {
         View view = inflater.inflate(R.layout.content_principal,container,false);
         return view;
 
-
-
     }
+
 }

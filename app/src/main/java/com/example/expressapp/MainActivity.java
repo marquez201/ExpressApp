@@ -82,7 +82,9 @@ public class MainActivity extends AppCompatActivity {
                         inten3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(inten3);
                     }else {
+                        mProgressBar.dismiss();
                         Toast.makeText(getApplicationContext(),"No se pudo Iniciar", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"Correo y/o Contraseña Incorrectos",Toast.LENGTH_SHORT).show();
                     }
                 }
             });

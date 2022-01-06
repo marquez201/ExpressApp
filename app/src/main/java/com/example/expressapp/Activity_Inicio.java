@@ -15,9 +15,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.expressapp.Fragments.MainFragment;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.EmailAuthCredential;
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -71,6 +77,8 @@ public class Activity_Inicio extends AppCompatActivity implements NavigationView
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+
         drawerLayout.closeDrawer(GravityCompat.START);
         if (item.getItemId() == R.id.nav_servicio_gruas){
             Intent intent_gruas = new Intent(Activity_Inicio.this,MapsActivity.class);
@@ -83,6 +91,27 @@ public class Activity_Inicio extends AppCompatActivity implements NavigationView
         if (item.getItemId() == R.id.nav_servicio_gasolina){
             Intent intent_gasolina = new Intent(Activity_Inicio.this,MapsActivity.class);
             startActivity(intent_gasolina);
+        }
+        if(item.getItemId() == R.id.nav_eliminar_cuenta){
+            final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            AuthCredential credential = EmailAuthProvider.getCredential("manuel@gmail.com","yosoymanuel");
+            user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    user.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()){
+                                Intent intent_eliminar = new Intent(Activity_Inicio.this,MainActivity.class);
+                                intent_eliminar.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent_eliminar);
+                            }else {
+                                Toast.makeText(getApplicationContext(),"No se pudo Eliminar" + task.getException(),Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                }
+            });
         }
         if(item.getItemId() == R.id.nav_cerrar_sesion){
             mAuth.signOut();
