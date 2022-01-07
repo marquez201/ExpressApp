@@ -16,10 +16,11 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="tv_olvide_mi_contraseña">Recuperar Contraseña?</string>
+    <string name="tv_recuperar_pass">Recuperacion de Contraseña</string>
+    <string name="btn_solicitar_correo">Enviar Correo</string>
 
     <string name="action_settings">Settings</string>
     <string name="txt_id_usuario">ID Usuario</string>
-
 
 
     <string name="nav_eliminar_cuenta">Eliminar Cuenta</string>

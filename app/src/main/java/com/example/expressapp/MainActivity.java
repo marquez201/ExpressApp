@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private TextInputLayout til_correo,til_password;
     private Button btn_login,btn_registrarme;
     private ProgressDialog mProgressBar;
+    private TextView tv_recuperar_pass;
 
     FirebaseAuth mAuth;
     @Override
@@ -36,6 +38,18 @@ public class MainActivity extends AppCompatActivity {
 
         btn_login = (Button) findViewById(R.id.btn_Login);
         btn_registrarme = (Button) findViewById(R.id.btn_Registrarme);
+        tv_recuperar_pass = (TextView) findViewById(R.id.tv_Recuperar_Pass);
+
+        mAuth = FirebaseAuth.getInstance();
+        mProgressBar = new ProgressDialog(MainActivity.this);
+
+        tv_recuperar_pass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent recuperar = new Intent(MainActivity.this,Activity_Recuperar_2.class);
+                startActivity(recuperar);
+            }
+        });
 
 
         btn_registrarme.setOnClickListener(new View.OnClickListener() {
@@ -53,8 +67,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mAuth = FirebaseAuth.getInstance();
-        mProgressBar = new ProgressDialog(MainActivity.this);
+
     }
 
     public void verificar(){

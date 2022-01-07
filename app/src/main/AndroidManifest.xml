@@ -24,6 +24,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExpressApp">
         <activity
+            android:name=".Activity_Recuperar_2"
+            android:exported="false" />
+        <activity
+            android:name=".Activity_Recuperar"
+            android:exported="false" />
+        <activity
             android:name=".SplashSreen_2"
             android:exported="true">
             <intent-filter>
