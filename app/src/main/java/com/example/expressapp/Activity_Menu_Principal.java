@@ -68,7 +68,8 @@ public class Activity_Menu_Principal extends AppCompatActivity {
         } else if (id == R.id.menu_confi){
 
         } else if (id == R.id.menu_acerca){
-
+            Intent intent_noso = new Intent(Activity_Menu_Principal.this,Activity_Nosotros.class);
+            startActivity(intent_noso);
         } else if (id == R.id.menu_eliminar){
             final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             AuthCredential credential = EmailAuthProvider.getCredential("manuel@gmail.com","yosoymanuel");

@@ -24,9 +24,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExpressApp">
         <activity
+            android:name=".Activity_Nosotros"
+            android:exported="false" />
+        <activity
             android:name=".Activity_Menu_Principal"
-            android:exported="false"
-            />
+            android:exported="false" />
         <activity
             android:name=".Activity_Recuperar_2"
             android:exported="false" />

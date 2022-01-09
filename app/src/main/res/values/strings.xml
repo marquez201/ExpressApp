@@ -22,6 +22,20 @@
     <string name="tv_usuario">Usuario</string>
     <string name="tv_servicios">Seleciona Algun Servicio</string>
     <string name="btn_buscar">Buscar</string>
+    <string name="tv_nosotros">¿Quienes Somos?</string>
+    <string name="texto">Somos una empresa pequeña que lo que ofrecemos es
+    brindar una mejora para la socieda sobre el servicio que la mayoria de
+    las personas ocupan en su tiempo ya sea que se les termino el gas o estas
+    en la autopista lejos de una gasolinera y con nosotros y nuestra aplicacion
+    te brindaremos la facilidad de solicitar el servicio y en donde quiera que
+    te encuentres al proveedor de gasolina con tu ubicacion sera mas facil llevarte
+    la gasolina para que puedas seguir con tu viaje como ya lo mencionamos somos una
+    empresa pequeña pero con el objetivo de crecer</string>
+    <string name="tv_puedes">Puedes Contactarnos Atra vez de..</string>
+    <string name="tv_correo">Correo: </string>
+    <string name="tv_telefono">Telefono: </string>
+    <string name="tv_direccion_correo">expressservice@gmail.com</string>
+    <string name="tv_num_telefono">6675967545</string>
 
     <string name="menu_datos">Datos</string>
     <string name="menu_configuracion">Configuracion</string>
