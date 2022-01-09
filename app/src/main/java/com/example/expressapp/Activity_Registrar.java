@@ -18,13 +18,14 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Activity_Registrar extends AppCompatActivity {
-    private TextInputLayout til_nombre_r,til_correo_r,til_password_r,til_confirm_pass_r;
-    private EditText et_nombre,et_email,et_password,et_confirm_pass;
+    public TextInputLayout til_nombre_r,til_correo_r,til_password_r,til_confirm_pass_r;
     private Button btn_registrar;
     private ProgressDialog mProgressBar;
-
     FirebaseAuth mAuth;
-
+    public String s_nombre = "";
+    public String s_email = "";
+    public String s_password = "";
+    public String s_confirm_pass = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +34,6 @@ public class Activity_Registrar extends AppCompatActivity {
         til_correo_r = (TextInputLayout) findViewById(R.id.txt_Correo_Regis);
         til_password_r = (TextInputLayout) findViewById(R.id.txt_Password_R);
         til_confirm_pass_r = (TextInputLayout) findViewById(R.id.txt_Confirmar_Pass_R);
-        //et_nombre = (EditText) findViewById(R.id.txt_Nombre);
-        //et_email = (EditText) findViewById(R.id.txt_Email);
-        //et_password = (EditText) findViewById(R.id.txt_Password);
-        //et_confirm_pass = (EditText) findViewById(R.id.txt_Confirmd_Password);
         btn_registrar = (Button) findViewById(R.id.btn_Registrar);
 
         btn_registrar.setOnClickListener(new View.OnClickListener() {
@@ -51,15 +48,10 @@ public class Activity_Registrar extends AppCompatActivity {
     }//Fin del onCreate
 
     public void verificarCredenciales(){
-        String s_nombre = til_nombre_r.getEditText().getText().toString();
-        String s_email = til_correo_r.getEditText().getText().toString();
-        String s_password = til_password_r.getEditText().getText().toString();
-        String s_confirm_pass = til_confirm_pass_r.getEditText().getText().toString();
-        //String snombre = et_nombre.getText().toString();
-        //String semail = et_email.getText().toString();
-        //String spassword = et_password.getText().toString();
-        //String sconfirmpass = et_confirm_pass.getText().toString();
-
+        s_nombre = til_nombre_r.getEditText().getText().toString();
+        s_email = til_correo_r.getEditText().getText().toString();
+        s_password = til_password_r.getEditText().getText().toString();
+        s_confirm_pass = til_confirm_pass_r.getEditText().getText().toString();
         if(s_nombre.isEmpty() || s_nombre.length() < 5){
             showError(til_nombre_r,"Nombre no Valido");
         }if(s_email.isEmpty() || !s_email.contains("@")){

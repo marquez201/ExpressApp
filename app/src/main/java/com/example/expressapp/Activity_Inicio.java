@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.expressapp.Fragments.DatosFragment;
 import com.example.expressapp.Fragments.MainFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -28,13 +29,15 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Activity_Inicio extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
-    private TextView tv_correo, tv_id;
+    public TextView tv_correo, tv_id;
 
     FirebaseAuth mAuth;
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
     Toolbar toolbar;
     NavigationView navigationView;
+    FragmentManager fragmentManager;
+    FragmentTransaction fragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,18 +50,13 @@ public class Activity_Inicio extends AppCompatActivity implements NavigationView
 
 
 
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigationView);
-        FragmentManager fragmentManager;
-        FragmentTransaction fragmentTransaction;
-
 
         navigationView.setNavigationItemSelectedListener(this);
-
-
-
 
         actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
@@ -71,8 +69,6 @@ public class Activity_Inicio extends AppCompatActivity implements NavigationView
         fragmentTransaction.commit();
 
 
-
-
     }
 
     @Override
@@ -80,6 +76,13 @@ public class Activity_Inicio extends AppCompatActivity implements NavigationView
 
 
         drawerLayout.closeDrawer(GravityCompat.START);
+
+        if(item.getItemId() == R.id.nav_home){
+            fragmentManager = getSupportFragmentManager();
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_nav_host_fragment_content_principal,new DatosFragment());
+            fragmentTransaction.commit();
+        }
         if (item.getItemId() == R.id.nav_servicio_gruas){
             Intent intent_gruas = new Intent(Activity_Inicio.this,MapsActivity.class);
             startActivity(intent_gruas);

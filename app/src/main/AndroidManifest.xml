@@ -24,6 +24,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExpressApp">
         <activity
+            android:name=".Activity_Menu_Principal"
+            android:exported="false"
+            />
+        <activity
             android:name=".Activity_Recuperar_2"
             android:exported="false" />
         <activity
@@ -68,7 +72,7 @@
             android:name=".Principal_Activity"
             android:exported="false"
             android:label="@string/title_activity_principal"
-            android:theme="@style/Theme.ExpressApp.NoActionBar" />
+            android:theme="@style/Theme.ExpressApp" />
         <activity
             android:name=".Activity_Inicio"
             android:exported="false" />

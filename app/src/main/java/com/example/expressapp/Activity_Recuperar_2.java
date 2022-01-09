@@ -39,7 +39,7 @@ public class Activity_Recuperar_2 extends AppCompatActivity {
                     mProgressBar.show();
                     Recuperar_Pass2();
                 }else {
-                    //showError(til_email_recup,"Correo Invalido");
+                    showError(til_email_recup,"Correo Invalido");
                     Toast.makeText(Activity_Recuperar_2.this,"Debe ingresar el correo",Toast.LENGTH_SHORT).show();
                 }
             }

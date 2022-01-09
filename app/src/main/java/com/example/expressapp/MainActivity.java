@@ -21,10 +21,12 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     //private EditText et_email_login,et_password_login;
-    private TextInputLayout til_correo,til_password;
+    public TextInputLayout til_correo,til_password;
     private Button btn_login,btn_registrarme;
     private ProgressDialog mProgressBar;
     private TextView tv_recuperar_pass;
+    public String s_correo = "";
+    public String s_password  = "";
 
     FirebaseAuth mAuth;
     @Override
@@ -71,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void verificar(){
-        String s_correo = til_correo.getEditText().getText().toString();
-        String s_password  = til_password.getEditText().getText().toString();
+        s_correo = til_correo.getEditText().getText().toString();
+        s_password  = til_password.getEditText().getText().toString();
         //String s_email = et_email_login.getText().toString();
         //String s_pass = et_password_login.getText().toString();
         if(s_correo.isEmpty() || !s_correo.contains("@")){
@@ -91,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         mProgressBar.dismiss();
-                        Intent inten3 = new Intent(MainActivity.this,Activity_Inicio.class);
+                        Intent inten3 = new Intent(MainActivity.this,Activity_Menu_Principal.class);
                         inten3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(inten3);
                     }else {
@@ -115,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         FirebaseUser user = mAuth.getCurrentUser();
         if(user!=null){
-            Intent intent = new Intent(MainActivity.this,Activity_Inicio.class);
+            Intent intent = new Intent(MainActivity.this,Activity_Menu_Principal.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         }

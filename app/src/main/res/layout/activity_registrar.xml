@@ -14,7 +14,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
-        android:backgroundTint="@android:color/holo_green_light"
+        android:backgroundTint="@color/verde"
         android:drawableLeft="@drawable/ic_crear_usuer"
         android:text="@string/btn_crear"
         android:textColor="@color/black"
@@ -53,7 +53,7 @@
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
-        app:boxStrokeColor="@color/black"
+        app:boxStrokeColor="@color/verde"
         app:boxStrokeErrorColor="@color/design_default_color_error"
         app:counterOverflowTextColor="@color/design_default_color_error"
         app:errorIconTint="@color/design_default_color_error"
@@ -61,16 +61,16 @@
         app:helperText="@string/text_ayuda"
         app:helperTextTextColor="@color/white"
         app:hintTextColor="@color/white"
-        app:startIconDrawable="@drawable/ic_editar_nombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_Registrar"
+        app:startIconDrawable="@drawable/ic_editar_nombre"
         app:startIconTint="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -87,7 +87,7 @@
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
-        app:boxStrokeColor="@color/black"
+        app:boxStrokeColor="@color/verde"
         app:boxStrokeErrorColor="@color/design_default_color_error"
         app:counterOverflowTextColor="@color/design_default_color_error"
         app:errorIconTint="@color/design_default_color_error"
@@ -95,11 +95,11 @@
         app:helperText="@string/text_ayuda"
         app:helperTextTextColor="@color/white"
         app:hintTextColor="@color/white"
-        app:startIconDrawable="@drawable/ic_email_login"
-        app:startIconTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_Nombre_R">
+        app:layout_constraintTop_toBottomOf="@+id/txt_Nombre_R"
+        app:startIconDrawable="@drawable/ic_email_login"
+        app:startIconTint="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -113,8 +113,8 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:hint="@string/txt_password"
         android:textColorHint="@color/white"
@@ -122,27 +122,27 @@
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
-        app:boxStrokeColor="@color/black"
+        app:boxStrokeColor="@color/verde"
         app:boxStrokeErrorColor="@color/design_default_color_error"
         app:counterOverflowTextColor="@color/design_default_color_error"
+        app:endIconMode="password_toggle"
         app:errorIconTint="@color/design_default_color_error"
         app:errorTextColor="@color/design_default_color_error"
         app:helperText="@string/text_ayuda"
         app:helperTextTextColor="@color/white"
         app:hintTextColor="@color/white"
-        app:endIconMode="password_toggle"
-        app:passwordToggleDrawable="@drawable/ic_ocultar"
-        app:startIconDrawable="@drawable/ic_pass_login"
-        app:startIconTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_Correo_Regis">
+        app:layout_constraintTop_toBottomOf="@+id/txt_Correo_Regis"
+        app:passwordToggleDrawable="@drawable/ic_ocultar"
+        app:startIconDrawable="@drawable/ic_pass_login"
+        app:startIconTint="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -159,21 +159,21 @@
         app:boxCornerRadiusBottomStart="10dp"
         app:boxCornerRadiusTopEnd="10dp"
         app:boxCornerRadiusTopStart="10dp"
-        app:boxStrokeColor="@color/black"
+        app:boxStrokeColor="@color/verde"
         app:boxStrokeErrorColor="@color/design_default_color_error"
         app:counterOverflowTextColor="@color/design_default_color_error"
+        app:endIconMode="password_toggle"
         app:errorIconTint="@color/design_default_color_error"
         app:errorTextColor="@color/design_default_color_error"
         app:helperText="@string/text_ayuda"
         app:helperTextTextColor="@color/white"
         app:hintTextColor="@color/white"
-        app:endIconMode="password_toggle"
-        app:passwordToggleDrawable="@drawable/ic_ocultar"
-        app:startIconDrawable="@drawable/ic_pass_login"
-        app:startIconTint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_Password_R">
+        app:layout_constraintTop_toBottomOf="@+id/txt_Password_R"
+        app:passwordToggleDrawable="@drawable/ic_ocultar"
+        app:startIconDrawable="@drawable/ic_pass_login"
+        app:startIconTint="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
