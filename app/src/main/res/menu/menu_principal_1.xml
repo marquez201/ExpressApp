@@ -12,9 +12,6 @@
         android:id="@+id/menu_acerca"
         android:title="@string/menu_acerca_de" />
     <item
-        android:id="@+id/menu_eliminar"
-        android:title="@string/nav_eliminar_cuenta" />
-    <item
         android:id="@+id/menu_cerrar"
         android:title="@string/menu_cerrar_sesion" />
 </menu>

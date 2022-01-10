@@ -24,6 +24,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExpressApp">
         <activity
+            android:name=".Activity_Datos"
+            android:exported="false" />
+        <activity
             android:name=".Activity_Nosotros"
             android:exported="false" />
         <activity

@@ -64,32 +64,13 @@ public class Activity_Menu_Principal extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
         if (id == R.id.menu_datos){
-
+            Intent intent_datos = new Intent(Activity_Menu_Principal.this,Activity_Datos.class);
+            startActivity(intent_datos);
         } else if (id == R.id.menu_confi){
 
         } else if (id == R.id.menu_acerca){
             Intent intent_noso = new Intent(Activity_Menu_Principal.this,Activity_Nosotros.class);
             startActivity(intent_noso);
-        } else if (id == R.id.menu_eliminar){
-            final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-            AuthCredential credential = EmailAuthProvider.getCredential("manuel@gmail.com","yosoymanuel");
-            user.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    user.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if (task.isSuccessful()){
-                                Intent intent_eliminar = new Intent(Activity_Menu_Principal.this,MainActivity.class);
-                                intent_eliminar.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                                startActivity(intent_eliminar);
-                            }else {
-                                Toast.makeText(getApplicationContext(),"No se pudo Eliminar" + task.getException(),Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
-                }
-            });
         } else if (id == R.id.menu_cerrar){
             mAuth.signOut();
             Intent intent = new Intent(Activity_Menu_Principal.this,MainActivity.class);
