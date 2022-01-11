@@ -33,7 +33,7 @@
             android:layout_toRightOf="@id/imv_foto_perfil"
             android:text="@string/txt_email"
             android:textColor="@color/white"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold">
 
         </TextView>

@@ -24,7 +24,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Activity_Menu_Principal extends AppCompatActivity {
     public TextView tv_correo, tv_id;
-    private ImageView iv_grua;
+    private ImageView iv_grua,iv_gas,iv_gasolina;
     Toolbar toolbar;
     //ActionBarDrawerToggle actionBarDrawerToggle;
     FirebaseAuth mAuth;
@@ -36,6 +36,8 @@ public class Activity_Menu_Principal extends AppCompatActivity {
         tv_correo = (TextView) findViewById(R.id.textView_email);
         tv_id = (TextView) findViewById(R.id.textView_ID);
         iv_grua = (ImageView) findViewById(R.id.imageView_grua);
+        iv_gas = (ImageView) findViewById(R.id.imageView_Gas);
+        iv_gasolina = (ImageView) findViewById(R.id.imageView_Gasolina);
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
 
@@ -52,7 +54,21 @@ public class Activity_Menu_Principal extends AppCompatActivity {
             }
         });
 
+        iv_gas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_gas = new Intent(Activity_Menu_Principal.this,MapsActivity.class);
+                startActivity(intent_gas);
+            }
+        });
 
+        iv_gasolina.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_gasolina = new Intent(Activity_Menu_Principal.this, MapsActivity.class);
+                startActivity(intent_gasolina);
+            }
+        });
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
