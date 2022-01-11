@@ -91,7 +91,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="10dp"
         android:text="@string/tv_direccion_correo"
-        android:textColor="@color/verde"
+        android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -103,7 +103,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="10dp"
         android:text="@string/tv_num_telefono"
-        android:textColor="@color/verde"
+        android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView_Email" />

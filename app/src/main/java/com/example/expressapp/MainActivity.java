@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,8 +22,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
-    //private EditText et_email_login,et_password_login;
     public TextInputLayout til_correo,til_password;
+    private ImageView imageView_guia;
     private Button btn_login,btn_registrarme;
     private ProgressDialog mProgressBar;
     private TextView tv_recuperar_pass;
@@ -35,12 +37,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         til_correo = (TextInputLayout) findViewById(R.id.txt_Correo_Login);
         til_password = (TextInputLayout) findViewById(R.id.txt_Password_Login1);
-       // et_email_login = (EditText) findViewById(R.id.txt_Email_Login);
-        //et_password_login = (EditText) findViewById(R.id.txt_Password_Login);
-
         btn_login = (Button) findViewById(R.id.btn_Login);
         btn_registrarme = (Button) findViewById(R.id.btn_Registrarme);
         tv_recuperar_pass = (TextView) findViewById(R.id.tv_Recuperar_Pass);
+        imageView_guia = (ImageView) findViewById(R.id.imv_Guia);
 
         mAuth = FirebaseAuth.getInstance();
         mProgressBar = new ProgressDialog(MainActivity.this);
@@ -69,6 +69,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        imageView_guia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_guia = new Intent(Intent.ACTION_VIEW, Uri.parse("https://drive.google.com/drive/folders/1rgMp6TfTLI_0r-Pv3OgBxmxdYVMbVweU"));
+                startActivity(intent_guia);
+            }
+        });
 
     }
 

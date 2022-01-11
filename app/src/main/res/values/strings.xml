@@ -37,7 +37,10 @@
     <string name="tv_direccion_correo">expressservice@gmail.com</string>
     <string name="tv_num_telefono">6675967545</string>
     <string name="btn_solicitar_servicio">Solicitar Servicio</string>
-
+    <string name="tv_gas_menu">Gas</string>
+    <string name="tv_gasolina_menu">Gasolina</string>
+    <string name="tv_grua_menu">Grua</string>
+    <string name="tv_guia_user">Guia de Uso</string>
     <string name="menu_datos">Datos</string>
     <string name="menu_configuracion">Configuracion</string>
     <string name="menu_acerca_de">Acerca de Nosotros</string>
