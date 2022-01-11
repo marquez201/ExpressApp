@@ -6,15 +6,19 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
@@ -26,19 +30,46 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
+    MapView view;
+    private Button btn_solicitar;
+    private ProgressDialog mProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mProgressBar = new ProgressDialog(MapsActivity.this);
 
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        /*
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
         getLocalizacion();
+
+         */
+        btn_solicitar = (Button) findViewById(R.id.btn_soliciar_servicio);
+        btn_solicitar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mProgressBar.setTitle("Buscando....");
+                mProgressBar.setMessage("Buscando Servicios Disponibles");
+                mProgressBar.show();
+            }
+        });
+
+        view = (MapView) findViewById(R.id.mapview);
+        view.onCreate(savedInstanceState);
+        view.getMapAsync(this);
+
+    }
+
+    @Override
+    protected void onResume() {
+        view.onResume();
+        super.onResume();
     }
 
     private void getLocalizacion() {

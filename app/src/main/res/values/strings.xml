@@ -36,6 +36,7 @@
     <string name="tv_telefono">Telefono: </string>
     <string name="tv_direccion_correo">expressservice@gmail.com</string>
     <string name="tv_num_telefono">6675967545</string>
+    <string name="btn_solicitar_servicio">Solicitar Servicio</string>
 
     <string name="menu_datos">Datos</string>
     <string name="menu_configuracion">Configuracion</string>
